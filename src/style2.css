@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+  --linear-bg: linear-gradient(90deg, #2e323e, #282a33);
+  --font-family: 'Poppins', sans-serif;
+  --text-clr: #d2d1d3;
+  --text-clr-white: #fefefe;
+  --text-clr-2: #a5a5a5;
+  --bgc: #151824;
+  --input-clr: #12141d;
+  --accent-clr: #0d59e4;
+  --accent-clr-50: rgb(13, 89, 228, 0.25);
+}
+body {
+  background-color: var(--bgc);
+  font-family: var(--font-family);
+  color: var(--text-clr);
+}
+
+.menu-item {
+  background: var(--linear-bg);
+  padding: 3rem 0;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: none;
+  color: var(--text-clr);
+  font-size: 1.25rem;
+}
+.menu-item:hover {
+  background: var(--linear-bg);
+  border: none;
+  box-shadow: none;
+}
+.menu-item:active {
+  color: var(--text-clr);
+  border: none;
+  box-shadow: none;
+}
+.menu-item:active:focus {
+  color: var(--text-clr);
+  border-color: var(--accent-clr-50);
+  box-shadow: 0 0 10px var(--accent-clr-50);
+}
+.menu-item:focus {
+  background: var(--linear-bg);
+  color: var(--text-clr);
+  border: none;
+  box-shadow: none;
+}
+.menu-item:focus-visible {
+  background: var(--linear-bg);
+  color: var(--text-clr);
+  border: none;
+  box-shadow: none;
+}
+
+.card-bg {
+  background-color: var(--bgc);
+  margin-top: 0.5rem;
+  border: none;
+}
+
+hr {
+  color: #bbb;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='checkbox'],
+select {
+  background-color: var(--input-clr);
+  color: var(--text-clr-2);
+  border: 1px solid var(--accent-clr-50);
+  box-shadow: none;
+}
+
+input[type='text']:focus,
+input[type='number']:focus,
+input[type='checkbox']:focus {
+  outline: none;
+  border: 1px solid var(--accent-clr-50);
+  box-shadow: none;
+}
+
+input[type='text']:focus-visible,
+input[type='number']:focus-visible {
+  background-color: var(--input-clr);
+  outline: none;
+  color: var(--text-clr-white);
+  border: 1px solid var(--accent-clr-50);
+  box-shadow: 0 0 10px var(--accent-clr-50);
+}
+
+input[type='checkbox']:checked {
+  box-shadow: 0 0 10px var(--accent-clr-50);
+  background-color: var(--accent-clr-50);
+  border: 1px solid var(--accent-clr-50);
+}
+
+.button {
+  border: 1px solid var(--accent-clr);
+  color: var(--accent-clr);
+}
+.button:hover {
+  border: 1px solid var(--accent-clr);
+  background-color: var(--accent-clr);
+  color: var(--text-clr-white);
+}
