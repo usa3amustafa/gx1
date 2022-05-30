@@ -4,7 +4,7 @@
   --linear-bg: linear-gradient(
     90deg,
     rgba(63, 65, 75, 0.5),
-    rgb(13, 89, 228, 0.5)
+    rgb(13, 89, 228, 0.1)
   );
   --font-family: 'Poppins', sans-serif;
   --text-clr: #d2d1d3;
