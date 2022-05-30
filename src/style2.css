@@ -99,7 +99,8 @@ input[type='checkbox'] {
   border: 1px solid var(--accent-clr-25);
   box-shadow: 0 0 5px var(--accent-clr-25);
 }
-input[type='number']:disabled {
+input[type='number']:disabled,
+input[type='text']:disabled {
   background-color: var(--input-clr-disabled);
   border: 1px solid var(--accent-clr-25);
   box-shadow: 0 0 1px var(--accent-clr-10);
