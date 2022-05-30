@@ -268,20 +268,24 @@ input[type='radio'] {
 
 .radio-label::before {
   content: '';
-  height: 15px;
-  width: 15px;
+  height: 12.5px;
+  width: 12.5px;
   position: relative;
   top: 1px;
   border-radius: 8px;
   background-color: var(--input-clr);
-  border: 1px solid var(--accent-clr-25);
+  outline: 1px solid var(--accent-clr-25);
+  outline-offset: 2px;
   box-shadow: 0 0 5px var(--accent-clr-25);
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 0.75rem;
 }
 
 input[type='radio']:checked + .radio-label::before {
-  box-shadow: 0 0 2px var(--accent-clr-75), 0 0 10px var(--accent-clr-75);
+  box-shadow: 0 0 2px var(--accent-clr), 0 0 20px var(--accent-clr-75);
   background-color: var(--accent-clr);
   border: 1px solid var(--accent-clr);
+
+  outline: 1px solid var(--accent-clr);
+  outline-offset: 2px;
 }
