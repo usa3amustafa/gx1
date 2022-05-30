@@ -10,7 +10,7 @@
   --text-clr: #d2d1d3;
   --text-clr-white: #fefefe;
   --text-clr-2: #a5a5a5;
-  --bgc: #151824;
+  --bgc: rgb(10, 10, 10);
   --input-clr: #12141d;
   --input-clr-disabled: rgba(35, 38, 54, 0.5);
   --accent-clr: rgb(13, 89, 228);
