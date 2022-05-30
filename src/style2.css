@@ -3,8 +3,8 @@
 :root {
   --linear-bg: linear-gradient(
     90deg,
-    rgb(13, 89, 228, 0.05),
-    rgb(13, 89, 228, 0.01)
+    rgba(42, 44, 46, 0.95),
+    rgba(48, 52, 63, 0.5)
   );
   --font-family: 'Poppins', sans-serif;
   --text-clr: #d2d1d3;
