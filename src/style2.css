@@ -39,40 +39,51 @@ body {
   text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
 }
 .menu-item {
-  background: var(--linear-bg);
-  padding: 3rem 0;
   border: none;
+  padding: 3rem 0;
   border-radius: 1rem;
   box-shadow: none;
-  color: var(--text-clr);
   font-size: 1.25rem;
+  color: var(--accent-clr);
+  background: linear-gradient(90deg, rgba(13, 89, 228, 0.05), var(--bgc));
+  border: 2px solid var(--accent-clr-50);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
 }
 .menu-item:hover {
-  background: var(--linear-bg);
-  border: none;
-  box-shadow: none;
+  color: var(--accent-clr);
+  background: rgbaa(13, 89, 228, 0.05);
+  border: 2px solid var(--accent-clr-50);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
 }
 .menu-item:active {
-  color: var(--text-clr);
-  border: none;
-  box-shadow: none;
+  color: var(--accent-clr);
+  background: rgba(13, 89, 228, 0.05);
+  border: 2px solid var(--accent-clr-50);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
 }
 .menu-item:active:focus {
-  color: var(--text-clr);
-  border-color: var(--accent-clr-50);
-  box-shadow: 0 0 10px var(--accent-clr-50);
+  color: var(--accent-clr);
+  background: rgb(13, 89, 228, 0.05);
+  border: 2px solid var(--accent-clr-50);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
 }
 .menu-item:focus {
-  background: var(--linear-bg);
-  color: var(--text-clr);
-  border: none;
-  box-shadow: none;
+  color: var(--accent-clr);
+  background: rgb(13, 89, 228, 0.05);
+  border: 2px solid var(--accent-clr-50);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
 }
 .menu-item:focus-visible {
-  background: var(--linear-bg);
-  color: var(--text-clr);
-  border: none;
-  box-shadow: none;
+  color: var(--accent-clr);
+  background: rgb(13, 89, 228, 0.05);
+  border: 2px solid var(--accent-clr-50);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
 }
 
 .card-bg {
@@ -100,6 +111,11 @@ input[type='checkbox'] {
   box-shadow: 0 0 5px var(--accent-clr-25);
 }
 input[type='number']:disabled {
+  background-color: var(--input-clr-disabled);
+  border: 1px solid var(--accent-clr-25);
+  box-shadow: 0 0 1px var(--accent-clr-10);
+}
+input[type='text']:disabled {
   background-color: var(--input-clr-disabled);
   border: 1px solid var(--accent-clr-25);
   box-shadow: 0 0 1px var(--accent-clr-10);
