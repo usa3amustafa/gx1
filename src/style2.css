@@ -13,21 +13,26 @@
   --bgc: #151824;
   --input-clr: #12141d;
   --input-clr-disabled: rgba(35, 38, 54, 0.5);
-  --accent-clr: #0d59e4;
-  --accent-clr-75: rgb(13, 89, 228, 0.75);
-  --accent-clr-50: rgb(13, 89, 228, 0.5);
-  --accent-clr-25: rgb(13, 89, 228, 0.25);
-  --accent-clr-10: rgb(13, 89, 228, 0.1);
+  --accent-clr: rgb(13, 89, 228);
+  --accent-clr-75: rgb(13, 89, 228, 0.95);
+  --accent-clr-50: rgb(13, 89, 228, 0.85);
+  --accent-clr-25: rgb(13, 89, 228, 0.75);
+  --accent-clr-10: rgb(13, 89, 228, 0.5);
   --sec-clr: rgb(13, 228, 217);
-  --sec-clr-75: rgb(13, 228, 217, 0.75);
-  --sec-clr-50: rgb(13, 228, 217, 0.5);
-  --sec-clr-25: rgb(13, 228, 217, 0.25);
-  --sec-clr-10: rgb(13, 228, 217, 0.1);
+  --sec-clr-75: rgb(13, 228, 217, 0.95);
+  --sec-clr-50: rgb(13, 228, 217, 0.85);
+  --sec-clr-25: rgb(13, 228, 217, 0.75);
+  --sec-clr-10: rgb(13, 228, 217, 0.5);
   --reset-clr: rgb(221, 0, 0);
-  --reset-clr-75: rgb(221, 0, 0, 0.75);
-  --reset-clr-50: rgb(221, 0, 0, 0.5);
-  --reset-clr-25: rgb(221, 0, 0, 0.25);
-  --reset-clr-10: rgb(221, 0, 0, 0.1);
+  --reset-clr-75: rgb(221, 0, 0, 0.95);
+  --reset-clr-50: rgb(221, 0, 0, 0.85);
+  --reset-clr-25: rgb(221, 0, 0, 0.75);
+  --reset-clr-10: rgb(221, 0, 0, 0.5);
+  --save-clr: rgb(235, 153, 71);
+  --save-clr-75: rgb(235, 153, 71, 0.95);
+  --save-clr-50: rgb(235, 153, 71, 0.85);
+  --save-clr-25: rgb(235, 153, 71, 0.75);
+  --save-clr-10: rgb(235, 153, 71, 0.5);
 }
 body {
   background-color: var(--bgc);
@@ -39,8 +44,8 @@ body {
   text-transform: uppercase;
   margin-bottom: 2rem;
   font-size: 3rem;
-  color: var(--accent-clr);
-  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
+  color: var(--sec-clr);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--sec-clr);
 }
 .menu-item {
   padding: 3rem 0;
@@ -237,6 +242,38 @@ input[type='checkbox']:checked {
   text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--reset-clr);
 }
 .reset-button:focus-visible {
+  outline: none;
+}
+.save-button {
+  border: 1px solid var(--save-clr);
+  color: var(--save-clr);
+  background-color: var(--bgc);
+  border: 1px solid var(--save-clr-25);
+  box-shadow: 0 0 10px var(--save-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--save-clr);
+}
+.save-button:hover {
+  border: 1px solid var(--save-clr-25);
+  background-color: var(--bgc);
+  color: var(--save-clr);
+  box-shadow: 0 0 10px var(--save-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--save-clr);
+}
+.save-button:active {
+  border: 1px solid var(--save-clr-25);
+  background-color: var(--input-clr);
+  color: var(--save-clr);
+  box-shadow: 0 0 10px var(--save-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--save-clr);
+}
+.save-button:focus {
+  border: 1px solid var(--save-clr-25);
+  box-shadow: 0 0 10px var(--save-clr-25);
+  background-color: var(--input-clr);
+  color: var(--save-clr);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--save-clr);
+}
+.save-button:focus-visible {
   outline: none;
 }
 
