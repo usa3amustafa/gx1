@@ -98,11 +98,7 @@
       style="margin-top: 20px; max-width: 600px"
       id="mainPage"
     >
-      <h2>
-        <div align="center">
-          <img src="src/rtk-setup_acnovo.png" alt="Acnovo WiFi Setup" />
-        </div>
-      </h2>
+      <h2 class="logo">System Setup</h2>
       <div class="col-sm-12 mt-3">
         <div align="center" class="small">
           <span id="rtkFirmwareVersion" style="display: inline"
@@ -302,7 +298,7 @@
                   <button
                     type="button"
                     id="nmeaDefaults"
-                    class="btn btn-primary"
+                    class="btn btn-primary button-sec"
                     onClick="resetToNmeaDefaults()"
                   >
                     Reset to Surveying Defaults (NMEAx5)
@@ -312,7 +308,7 @@
                   <button
                     type="button"
                     id="loggingDefaults"
-                    class="btn btn-primary"
+                    class="btn btn-primary button-sec"
                     onClick="resetToLoggingDefaults()"
                   >
                     Reset to Logging Defaults (NMEAx5 + RXMx2)
@@ -2003,7 +1999,7 @@
               <button
                 type="button"
                 id="factoryDefaults"
-                class="btn btn-primary"
+                class="btn btn-primary button-sec"
                 onClick="resetToFactoryDefaults()"
                 disabled
               >
@@ -2127,7 +2123,7 @@
                     type="submit"
                     value="Upload"
                     id="submitFirmwareFile"
-                    class="btn btn-primary"
+                    class="btn btn-primary button-sec"
                     style="margin-top: 5px"
                     onclick="firmwareUploadWait()"
                   />
@@ -2158,7 +2154,7 @@
             <button
               type="button"
               id="saveBtn"
-              class="btn btn-secondary"
+              class="btn btn-secondary button"
               onclick="validateFields()"
             >
               Save Configuration <span class="icon-save ms-1"></span>
@@ -2170,12 +2166,10 @@
             <button
               type="button"
               id="exitBtn"
-              class="btn btn-outline-secondary"
+              class="btn btn-outline-secondary reset-button"
               onclick="exitConfig()"
             >
-              Exit and Reset<span
-                class="icon-remove text-secondary ms-1"
-              ></span>
+              Exit and Reset<span class="icon-remove ms-1"></span>
             </button>
             <p id="exitBtnError" class="inlineSuccess"></p>
             <p>&nbsp;</p>

@@ -8,15 +8,36 @@
   --text-clr-2: #a5a5a5;
   --bgc: #151824;
   --input-clr: #12141d;
+  --input-clr-disabled: rgba(35, 38, 54, 0.5);
   --accent-clr: #0d59e4;
-  --accent-clr-50: rgb(13, 89, 228, 0.25);
+  --accent-clr-75: rgb(13, 89, 228, 0.75);
+  --accent-clr-50: rgb(13, 89, 228, 0.5);
+  --accent-clr-25: rgb(13, 89, 228, 0.25);
+  --accent-clr-10: rgb(13, 89, 228, 0.1);
+  --sec-clr: rgb(13, 228, 217);
+  --sec-clr-75: rgb(13, 228, 217, 0.75);
+  --sec-clr-50: rgb(13, 228, 217, 0.5);
+  --sec-clr-25: rgb(13, 228, 217, 0.25);
+  --sec-clr-10: rgb(13, 228, 217, 0.1);
+  --reset-clr: rgb(221, 0, 0);
+  --reset-clr-75: rgb(221, 0, 0, 0.75);
+  --reset-clr-50: rgb(221, 0, 0, 0.5);
+  --reset-clr-25: rgb(221, 0, 0, 0.25);
+  --reset-clr-10: rgb(221, 0, 0, 0.1);
 }
 body {
   background-color: var(--bgc);
   font-family: var(--font-family);
   color: var(--text-clr);
 }
-
+.logo {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: var(--accent-clr);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
+}
 .menu-item {
   background: var(--linear-bg);
   padding: 3rem 0;
@@ -64,16 +85,25 @@ hr {
   color: #bbb;
 }
 
-input[type='text'],
 input[type='number'],
-input[type='checkbox'],
-select {
-  background-color: var(--input-clr);
-  color: var(--text-clr-2);
-  border: 1px solid var(--accent-clr-50);
-  box-shadow: none;
+input[type='text'] {
+  margin: 0.2rem 0;
+  display: inline-block;
 }
 
+input[type='text'],
+input[type='number'],
+input[type='checkbox'] {
+  background-color: var(--input-clr);
+  color: var(--text-clr-2);
+  border: 1px solid var(--accent-clr-25);
+  box-shadow: 0 0 5px var(--accent-clr-25);
+}
+input[type='number']:disabled {
+  background-color: var(--input-clr-disabled);
+  border: 1px solid var(--accent-clr-25);
+  box-shadow: 0 0 1px var(--accent-clr-10);
+}
 input[type='text']:focus,
 input[type='number']:focus,
 input[type='checkbox']:focus {
@@ -100,9 +130,117 @@ input[type='checkbox']:checked {
 .button {
   border: 1px solid var(--accent-clr);
   color: var(--accent-clr);
+  background-color: var(--bgc);
+  border: 1px solid var(--accent-clr-25);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
 }
 .button:hover {
-  border: 1px solid var(--accent-clr);
-  background-color: var(--accent-clr);
-  color: var(--text-clr-white);
+  border: 1px solid var(--accent-clr-25);
+  background-color: var(--bgc);
+  color: var(--accent-clr);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
+}
+.button:active {
+  border: 1px solid var(--accent-clr-25);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
+}
+.button:focus {
+  border: 1px solid var(--accent-clr-25);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--accent-clr);
+}
+
+.button-sec {
+  border: 1px solid var(--sec-clr);
+  color: var(--sec-clr);
+  background-color: var(--bgc);
+  border: 1px solid var(--sec-clr-25);
+  box-shadow: 0 0 10px var(--sec-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--sec-clr);
+}
+.button-sec:hover {
+  border: 1px solid var(--sec-clr-25);
+  background-color: var(--bgc);
+  color: var(--sec-clr);
+  box-shadow: 0 0 10px var(--sec-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--sec-clr);
+}
+.button-sec:active {
+  border: 1px solid var(--sec-clr-25);
+  background-color: var(--input-clr);
+  color: var(--sec-clr);
+  box-shadow: 0 0 10px var(--sec-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--sec-clr);
+}
+.button-sec:focus {
+  border: 1px solid var(--sec-clr-25);
+  box-shadow: 0 0 10px var(--sec-clr-25);
+  background-color: var(--input-clr);
+  color: var(--sec-clr);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--sec-clr);
+}
+.button-sec:focus-visible {
+  outline: none;
+}
+
+.button-sec:disabled {
+  border: 1px solid var(--sec-clr-50);
+  color: var(--sec-clr-50);
+  background-color: var(--bgc);
+  border: 1px solid var(--sec-clr-10);
+  box-shadow: 0 0 10px var(--sec-clr-10);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--sec-clr-50);
+}
+
+.reset-button {
+  border: 1px solid var(--reset-clr);
+  color: var(--reset-clr);
+  background-color: var(--bgc);
+  border: 1px solid var(--reset-clr-25);
+  box-shadow: 0 0 10px var(--reset-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--reset-clr);
+}
+.reset-button:hover {
+  border: 1px solid var(--reset-clr-25);
+  background-color: var(--bgc);
+  color: var(--reset-clr);
+  box-shadow: 0 0 10px var(--reset-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--reset-clr);
+}
+.reset-button:active {
+  border: 1px solid var(--reset-clr-25);
+  background-color: var(--input-clr);
+  color: var(--reset-clr);
+  box-shadow: 0 0 10px var(--reset-clr-25);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--reset-clr);
+}
+.reset-button:focus {
+  border: 1px solid var(--reset-clr-25);
+  box-shadow: 0 0 10px var(--reset-clr-25);
+  background-color: var(--input-clr);
+  color: var(--reset-clr);
+  text-shadow: 0 0 20px rgb(255, 255, 255, 0.25), 0 0 50px var(--reset-clr);
+}
+.reset-button:focus-visible {
+  outline: none;
+}
+
+select {
+  appearance: none;
+  padding: 5px 50px 5px 10px;
+  background: url('../img/down-arrow.png') no-repeat 95% center;
+  border-radius: 5px;
+  background-color: var(--input-clr);
+  color: var(--text-clr);
+  outline: none;
+
+  border: 1px solid var(--accent-clr-25);
+  box-shadow: 0 0 10px var(--accent-clr-25);
+}
+
+select:focus-within {
+  outline: none;
 }
